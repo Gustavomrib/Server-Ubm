@@ -1,0 +1,39 @@
+### Testar com a extensão "REST Client" do VS Code (clicar em "Send Request")
+
+### Listar
+GET http://localhost:3333/produtos
+
+### Buscar por nome/fabricante
+GET http://localhost:3333/produtos?search=mouse
+
+### Buscar por código
+GET http://localhost:3333/produtos/1
+
+### Criar
+POST http://localhost:3333/produtos
+Content-Type: application/json
+
+{
+  "nome": "Mouse sem fio",
+  "descri": "Mouse óptico 1600 DPI",
+  "fabricante": "Logitech",
+  "qtda": 10,
+  "preco": 89.90,
+  "custo": 55.00
+}
+
+### Atualizar
+PUT http://localhost:3333/produtos/1
+Content-Type: application/json
+
+{
+  "nome": "Mouse sem fio",
+  "descri": "Mouse óptico 2400 DPI",
+  "fabricante": "Logitech",
+  "qtda": 8,
+  "preco": 99.90,
+  "custo": 60.00
+}
+
+### Excluir
+DELETE http://localhost:3333/produtos/1
